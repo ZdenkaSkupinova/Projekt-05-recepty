@@ -38,3 +38,193 @@ body {
 /* ----- DOLE BUDE TVOJE CSS ----- */
 /* ------------------------------- */
 
+h1, h2, .kategorie, .koment {
+color: white;
+}
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 28px;
+    margin: 0;
+}
+
+h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    margin: 0;
+}
+.kategorie, 
+.koment  {
+    font-family: 'Source Sans Pro', sans-serif; 
+    font-weight: 400; 
+    font-size: 14px; 
+}
+p {
+ background-color: rgb(80, 161, 80);
+ padding: 10px 0 10px 0;
+ margin: 0;
+}
+.vege {
+    display: block;
+    width: 100%;   
+}
+.popis {
+    display: flex;
+    justify-content: space-between;
+}
+.recept1 {
+	background-image: url(images/salat.jpg);
+}
+.recept2 {
+	background-image: url(images/chlebicek.jpg);
+}
+.recept3 {
+	background-image: url(images/cizrna.jpg);
+}
+.recept4 {
+	background-image: url(images/tacos.jpg);
+}
+.recept5 {
+	background-image: url(images/burger.jpg);
+}
+
+.recept1 {
+    background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+    min-height: 200px;
+    padding: 10px 10px;
+    border-bottom: 3px solid white;
+    position: relative;
+}
+.recept2, 
+.recept3,
+.recept4,
+.recept5 {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+    min-height: 90px;
+    padding: 10px 10px;
+    border-bottom: 3px solid white;
+    position: relative;
+}
+.nazev {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+a {
+    font-weight: bold;
+    text-decoration: none;
+  }
+a:hover {
+    color: aqua;
+}
+
+
+@media (min-width: 480px) {
+
+    h1 {
+        font-size: 36px;
+    }
+    h2 {
+        font-size: 22px;
+    }
+    .recept1 {
+        min-height: 250px;
+        padding: 20px 20px;
+        background-color: green;
+    }
+    .snack {
+        display: flex;
+        flex-wrap: wrap;  
+    }
+    .recept2, 
+    .recept3,
+    .recept4,
+    .recept5 {
+        flex-direction: row;
+        flex: 1 1 50%;
+        min-height: 150px;
+        padding: 20px 20px;
+    }
+    .recept2 {
+        order: 1;
+        border-right: 3px solid white;
+    }
+    .recept3 {
+        order: 3;
+        border-right: 3px solid white;
+    }
+    .recept4 {
+        order: 2;
+    }
+    .recept5 {
+        order: 4;
+    }
+    .nazev {
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+    }
+    a {
+        text-decoration:underline ;
+    }  
+}
+
+@media (min-width: 860px) {
+
+    h1 {
+        font-size: 48px;
+    }
+    h2 {
+       font-size: 28px;
+       text-shadow: 0px 5px 3px rgb(122, 103, 103);
+    }
+    .vege {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .recept1 {
+        min-height: 400px;
+        padding: 20px 20px;
+        height: 100vh;
+        width: calc(100% / 3);
+        border-right: 3px solid white;
+   }
+    .snack {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: calc( 100% / 3 * 2)
+    }
+
+    .recept2,
+    .recept3,
+    .recept4,
+    .recept5 {
+        flex: 1 1 50%;
+        min-height: 200px;
+        height: 50vh;
+        padding: 20px 20px;
+    }
+    .recept2,
+    .recept3 {
+    border-bottom: 3px solid white;
+    }
+    .recept4,
+    .recept5 {
+    border-right: 3px solid white;
+    }
+
+    .nazev {
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+    }
+}
+    
+/* na desktopu je bílý talíř a bílé písmo názvu jídla, přidala jsem text shadov na h2. Zkusila jsem dát první recept background-color green, kdyby se nenačetl obr, ať jdou vidět texty.*/
